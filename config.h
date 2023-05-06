@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "White Rabbit:bold:pixelsize=20:antialias=true:autohint=true";
+static char *font = "Hack-Bold:bold:pixelsize=21:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
