@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack-Bold:bold:pixelsize=21:antialias=true:autohint=true";
+static char *font = "Hack-Bold:bold:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -94,11 +94,28 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.5;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+    [0] = "#eadab1", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	[1] = "#cc241d", /* red     */
+	[2] = "#98971a", /* green   */
+	[3] = "#d79921", /* yellow  */
+	[4] = "#458588", /* blue    */
+	[5] = "#b16286", /* magenta */
+	[6] = "#689d6a", /* cyan    */
+	[7] = "#a89984", /* white   */
+	[8]  = "#928374", /* black   */
+	[9]  = "#fb4934", /* red     */
+	[10] = "#b8bb26", /* green   */
+	[11] = "#fabd2f", /* yellow  */
+	[12] = "#83a598", /* blue    */
+	[13] = "#d3869b", /* magenta */
+	[14] = "#8ec07c", /* cyan    */
+	[15] = "#282828", /* white   */
 	/* 8 normal colors */
+    /*
 	"#010101", //"black",
 	"#4256ca", //"red3",
 	"#f22290", //"green3",
@@ -116,7 +133,7 @@ static const char *colorname[] = {
 	"#f6ee1f", //"magenta3",
 	"#003333", //"cyan3",
 	"#b80000", //"gray90",
-
+*/
 
 	/* 8 bright colors 
 	"#9e8a74",//"black",
@@ -137,12 +154,12 @@ static const char *colorname[] = {
 	"cyan",
 	"white",*/
 
-	[255] = 0,
+	//[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"black",
+//	"#cccccc",
+//	"#555555",
+//	"black",
 };
 
 
@@ -150,10 +167,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 0;
+unsigned int defaultbg = 15;
+static unsigned int defaultcs = 0;
+static unsigned int defaultrcs = 15;
 
 /*
  * Default shape of cursor
